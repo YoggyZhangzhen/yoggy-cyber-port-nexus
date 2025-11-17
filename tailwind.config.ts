@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "neon-cyan": "hsl(var(--neon-cyan))",
+        "neon-magenta": "hsl(var(--neon-magenta))",
+        "neon-green": "hsl(var(--neon-green))",
+        "neon-purple": "hsl(var(--neon-purple))",
+        "cyber-dark": "hsl(var(--cyber-dark))",
+        "cyber-darker": "hsl(var(--cyber-darker))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +86,46 @@ export default {
             height: "0",
           },
         },
+        "typing": {
+          "0%": { width: "0" },
+          "100%": { width: "100%" }
+        },
+        "blink": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" }
+        },
+        "glow": {
+          "0%, 100%": { 
+            boxShadow: "0 0 5px hsl(var(--neon-cyan)), 0 0 10px hsl(var(--neon-cyan)), 0 0 15px hsl(var(--neon-cyan))"
+          },
+          "50%": { 
+            boxShadow: "0 0 10px hsl(var(--neon-cyan)), 0 0 20px hsl(var(--neon-cyan)), 0 0 30px hsl(var(--neon-cyan))"
+          }
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" }
+        },
+        "slide-up": {
+          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" }
+        },
+        "neon-flicker": {
+          "0%, 100%": { opacity: "1" },
+          "41%, 43%": { opacity: "0.8" },
+          "45%, 47%": { opacity: "1" },
+          "49%, 51%": { opacity: "0.9" },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "typing": "typing 3s steps(20) forwards",
+        "blink": "blink 1s infinite",
+        "glow": "glow 2s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
+        "slide-up": "slide-up 0.6s ease-out forwards",
+        "neon-flicker": "neon-flicker 3s linear infinite",
       },
     },
   },
