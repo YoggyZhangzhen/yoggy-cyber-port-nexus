@@ -42,6 +42,8 @@ jobs:
         run: npm install
       - name: Build with Next.js
         run: npm run build
+      - name: Copy EvalForge static files
+        run: cp -r ./kuuga ./dist/kuuga
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
